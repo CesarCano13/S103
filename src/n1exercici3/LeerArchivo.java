@@ -28,6 +28,8 @@ public class LeerArchivo {
 				cadena = mibuffer.readLine();
 				nombres.put(cadena, cadena);
 			}
+			//Para cerrar el flujo de datos
+			mibuffer.close();
 		} catch (IOException e) {
 			System.out.println("No se ha encontrado el archivo");
 		}
