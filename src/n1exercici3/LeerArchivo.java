@@ -19,16 +19,20 @@ public class LeerArchivo {
 
 	public static void leer() {
 
-		String cadena = "";
+		String cadena;
 
 		try {
 			FileReader entrada = new FileReader("C:/Users/cesar/Documents/Itinerario/S103/countries.txt");
 			BufferedReader mibuffer = new BufferedReader(entrada);
-			while (cadena != null) {
-				cadena = mibuffer.readLine();
-				nombres.put(cadena, cadena);
+			while (((cadena = mibuffer.readLine()) != null) && (cadena.isEmpty())) {
+				String[] palabra = cadena.split(" ");
+				String paises = palabra[0];
+				String capitales = palabra[1];
+
+				nombres.put(paises, capitales);
+
 			}
-			//Para cerrar el flujo de datos
+			// Para cerrar el flujo de datos
 			mibuffer.close();
 		} catch (IOException e) {
 			System.out.println("No se ha encontrado el archivo");

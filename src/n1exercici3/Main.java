@@ -2,6 +2,7 @@ package n1exercici3;
 
 import java.io.FileWriter;
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -18,33 +19,35 @@ public class Main {
 		Usuario.crearUsuario();
 
 		//Creamos un objetedo de la clase leer y accedemos al método
-		LeerArchivo acceder = new LeerArchivo();
-		acceder.leer();
-		System.out.println("+++++++++++++++++++++++++++");
-
-		/*// Comprobar hashmap
-		for (String key : LeerArchivo.getNombres().keySet()) {
-			System.out.println(key + " = " + LeerArchivo.getNombres().get(key));
 		
+		/*LeerArchivo.leer();
 		System.out.println("+++++++++++++++++++++++++++");*/
 
+		// Comprobar hashmap
+		//for (String key : LeerArchivo.getNombres().keySet()) {
+			//System.out.println(key + " = " + LeerArchivo.getNombres().get(key));
 		
+							
+		// Generar el nombre aleatorio de el pais e introducir la respuesta e Introducir la respuesta
+	
+		Random generator = new Random();
+		Object[] values = LeerArchivo.getNombres().values().toArray();
+		Object randomValue = values[generator.nextInt(values.length)];
 		
-		/*// Generar el nombre aleatorio de el pais e introducir la respuesta e Introducir la respuesta
-		int index = (int) (Math.random() * LeerArchivo.getNombres().keySet());
-		
+			
 		for (int i = 0; i < MAXIMO; i++) {
-			System.out.print("¿Cuál es la capital de " + LeerArchivo.getNombres().keySet(index) + " :");
+			System.out.print("¿Cuál es la capital de " + randomValue + " :");
 			respuesta = scann.nextLine();
 			
-			if(respuesta.equalsIgnoreCase(respuesta)) {
+			if(respuesta.equalsIgnoreCase(LeerArchivo.getNombres().get(randomValue))) {
+				puntos++;
 				System.out.println("Has acertado. Tienes " + puntos + " puntos.");
 			} else {
 				System.out.println("Has fallado, vuelve a intentarlo");
 			}
 		}
 		
-		//Guardamos nombre y puntuación en un archivo txt
+		/*//Guardamos nombre y puntuación en un archivo txt
 		String resultado = "Nombre de usuario " + LeerArchivo.getNombres() + " . Puntuación " + puntos + " puntos." ;
 		
 		FileWriter escritura = new FileWriter("C:\\Users\\cesar\\Documents\\Itinerario\\S103\\classificacio.txt");
