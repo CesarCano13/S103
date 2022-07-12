@@ -23,9 +23,7 @@ public class Main {
 		/*LeerArchivo.leer();
 		System.out.println("+++++++++++++++++++++++++++");*/
 
-		// Comprobar hashmap
-		//for (String key : LeerArchivo.getNombres().keySet()) {
-			//System.out.println(key + " = " + LeerArchivo.getNombres().get(key));
+		
 		
 							
 		// Generar el nombre aleatorio de el pais e introducir la respuesta e Introducir la respuesta
