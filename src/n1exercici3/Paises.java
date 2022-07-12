@@ -1,4 +1,4 @@
-package n11exercici3;
+package n1exercici3;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -8,9 +8,7 @@ import java.util.HashMap;
 import java.util.Random;
 import java.util.Scanner;
 
-import n1exercici3.LeerArchivo;
-
-public class Main {
+public class Paises {
 
 	static int MAXIMO = 10;
 
@@ -29,7 +27,7 @@ public class Main {
 		HashMap<String, String> nombres = new HashMap<String, String>();
 
 		try {
-			FileReader fr = new FileReader("C:/Users/cesar/Documents/Itinerario/S103/src/n11exercici3/countries.txt");
+			FileReader fr = new FileReader("C:/Users/cesar/Documents/Itinerario/S103/src/n1exercici3/countries.txt");
 			BufferedReader br = new BufferedReader(fr);
 			while ((cadena = br.readLine()) != null) {
 				String[] palabra = cadena.split(" ");
@@ -66,7 +64,7 @@ public class Main {
 		String resultado = "Nombre de usuario " + usuario + " . Puntuación " + puntos + " puntos.";
 		try {
 			FileWriter escritura = new FileWriter(
-					"C:/Users/cesar/Documents/Itinerario/S103/src/n11exercici3/classificacio.txt");
+					"C:/Users/cesar/Documents/Itinerario/S103/src/n1exercici3/classificacio.txt");
 			for (int i = 0; i < resultado.length(); i++) {
 				escritura.write(resultado.charAt(i));
 			}
@@ -79,5 +77,5 @@ public class Main {
 		System.out.println("Se ha creado correctamente el archivo txt con el usuario y su puntuación");
 
 	}
-
+	
 }
