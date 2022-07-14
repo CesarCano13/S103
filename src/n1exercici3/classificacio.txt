@@ -1,1 +1,3 @@
-Nombre de usuario César . Puntuación 3 puntos.
+
+ Nombre de usuario: PIKACHU Puntuación: 1 puntos.
+ Nombre de usuario: CHARMANDER Puntuación: 2 puntos.
