@@ -13,13 +13,13 @@ public class GenerarAleatorio {
 		int puntos = 0;
 
 		for (int i = 0; i < MAXIMO; i++) {
-			Object[] pais = LeerArchivo.getNombres().values().toArray();
+			Object[] pais = GestionArchivo.getNombres().values().toArray();
 			Object paisAlea = pais[generator.nextInt(pais.length)];
 
 			System.out.print("¿Cuál es la capital de " + paisAlea + " :");
 			respuesta = scann.nextLine();
 
-			if (LeerArchivo.getNombres().containsKey(respuesta)) {
+			if (GestionArchivo.getNombres().containsKey(respuesta)) {
 				puntos++;
 				System.out.println("Has acertado. Tienes " + puntos + " puntos.");
 				System.out.println("*******************");

@@ -1,3 +1,6 @@
 
  Nombre de usuario: PIKACHU Puntuación: 1 puntos.
  Nombre de usuario: CHARMANDER Puntuación: 2 puntos.
+ Nombre de usuario: BULBASAUR Puntuación: 0 puntos.
+ Nombre de usuario: CHIKORITA Puntuación: 0 puntos.
+ Nombre de usuario: CHARIZARD Puntuación: 0 puntos.

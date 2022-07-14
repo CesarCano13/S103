@@ -1,11 +1,13 @@
 package n1exercici3;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashMap;
 
-public class LeerArchivo {
+public class GestionArchivo {
 
 	private static HashMap<String, String> nombres = new HashMap<String, String>();
 
@@ -14,7 +16,7 @@ public class LeerArchivo {
 	}
 
 	public static void setNombres(HashMap<String, String> nombres) {
-		LeerArchivo.nombres = nombres;
+		GestionArchivo.nombres = nombres;
 	}
 
 	public static void leer() {
@@ -34,5 +36,23 @@ public class LeerArchivo {
 			System.out.println("No se ha encontrado el archivo");
 		}
 		System.out.println("*************************************************");
+	}
+
+	public static void escribir(String resultado) {
+		try {
+			BufferedWriter escritura = new BufferedWriter(
+					new FileWriter("C:/Users/cesar/Documents/Itinerario/S103/src/n1exercici3/classificacio.txt", true));
+
+			for (int i = 0; i < resultado.length(); i++) {
+				escritura.write(resultado.charAt(i));
+
+			}
+			// Cerramos elflujo de datos
+			escritura.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		System.out.println("*****++***GRACIAS POR JUGAR********++");
+
 	}
 }
